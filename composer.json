@@ -1,0 +1,25 @@
+{
+  "name": "dennistrukhin/mail-service-client",
+  "authors": [
+    {
+      "name": "Dennis Trukhin",
+      "email": "dtrukhin@tsum.ru",
+      "role": "developer"
+    }
+  ],
+  "version": "0.1.0",
+  "description": "Email service client",
+  "license": "GPL-3.0",
+  "require": {
+    "php": ">=7.1",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "require-dev": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "Tsum\\MailingClient\\": "src/"
+    }
+  }
+}
