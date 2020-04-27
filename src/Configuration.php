@@ -9,6 +9,10 @@ class Configuration
         'name' => 'Mercury customer service',
         'address' => 'no-reply@mailing.blv.ru',
     ];
+    public const SENDER_WBM = [
+        'name' => 'Wedding By Mercury',
+        'address' => 'info@weddingbymercury.ru',
+    ];
     public const SENDER_DEFAULT = self::SENDER_BLV;
 
     private $apiKey = '';
