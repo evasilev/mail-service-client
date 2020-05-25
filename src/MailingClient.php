@@ -26,7 +26,7 @@ class MailingClient
     {
         $client = new Client([
             'base_uri' => self::MAILING_SERVICE_HOST,
-            'timeout'  => 2.0,
+            'timeout'  => $this->configuration->getTimeout(),
         ]);
         $json = (new JsonRequestBuilder())->buildFromEmail($email);
         $json['fromAddress'] = [$this->configuration->getSender()];

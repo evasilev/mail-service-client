@@ -2,6 +2,8 @@
 
 namespace Tsum\MailingClient;
 
+use Exception;
+
 class Configuration
 {
 
@@ -14,9 +16,11 @@ class Configuration
         'address' => 'info@weddingbymercury.ru',
     ];
     public const SENDER_DEFAULT = self::SENDER_BLV;
+    public const DEFAULT_TIMEOUT = 5.0;
 
     private $apiKey = '';
     private $sender = self::SENDER_DEFAULT;
+    private $timeout = self::DEFAULT_TIMEOUT;
 
     /**
      * @param mixed $apiKey
@@ -48,6 +52,26 @@ class Configuration
     public function setSender(array $sender): void
     {
         $this->sender = $sender;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTimeout(): float
+    {
+        return $this->timeout;
+    }
+
+    /**
+     * @param float $timeout
+     * @throws Exception
+     */
+    public function setTimeout(float $timeout): void
+    {
+        if ($timeout < 0) {
+            throw new Exception('Timeout can not be less then 0');
+        }
+        $this->timeout = $timeout;
     }
 
 }
