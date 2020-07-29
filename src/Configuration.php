@@ -15,6 +15,14 @@ class Configuration
         'name' => 'Wedding By Mercury',
         'address' => 'info@weddingbymercury.ru',
     ];
+    public const SENDER_TRETYAKOVSKY = [
+        'name' => 'Tretyakovsky Info',
+        'address' => 'no-reply@send.tretyakovsky.ru',
+    ];
+    public const SENDER_KUTUZOVSKY = [
+        'name' => 'Kutuzovsky Info',
+        'address' => 'no-reply@send.kutuzovsky31.ru',
+    ];
     public const SENDER_DEFAULT = self::SENDER_BLV;
     public const DEFAULT_TIMEOUT = 5.0;
 
