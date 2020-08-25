@@ -7,6 +7,10 @@ use Exception;
 class Configuration
 {
 
+    public const SENDER_BOUTIQUES = [
+        'name' => 'Boutiques Customer Service',
+        'address' => 'no-reply@send.boutiques.ru',
+    ];
     public const SENDER_BLV = [
         'name' => 'Mercury customer service',
         'address' => 'no-reply@mailing.blv.ru',
@@ -23,7 +27,7 @@ class Configuration
         'name' => 'Kutuzovsky Info',
         'address' => 'no-reply@send.kutuzovsky31.ru',
     ];
-    public const SENDER_DEFAULT = self::SENDER_BLV;
+    public const SENDER_DEFAULT = self::SENDER_BOUTIQUES;
     public const DEFAULT_TIMEOUT = 5.0;
 
     private $apiKey = '';
